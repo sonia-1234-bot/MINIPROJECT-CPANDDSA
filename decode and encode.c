@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include<string.h>
 
@@ -16,6 +15,11 @@ void encode(string str,int n)
         int l;
         dup=int(str[i]);
         l=dup+n;
+        if(l>122)
+        {
+         l=l-122;
+         l=97+l-1;
+        }  
         k=char(l);
         cout<<k;
         
