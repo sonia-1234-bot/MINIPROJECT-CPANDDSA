@@ -12,13 +12,13 @@ void encode(string str,int n)
     for(int i=0;i<str.length();i++)
     {
         int l;
-          if(islower(str[i]))
+          if(islower(str[i]))//to check if the character is lower or upper case
           {
-            dup=int(str[i]);
-            l=dup+n;
+            dup=int(str[i]);//copying each character and encoding it
+            l=dup+n;         //incrementing the integer value by number of shifts
             if(l>122)
            {
-             l=l-122;
+             l=l-122;       
              l=97+l-1;
            }  
            k=char(l);
@@ -26,7 +26,7 @@ void encode(string str,int n)
           }
           else
           {
-              dup=int(str[i]);
+              dup=int(str[i]);//copying each character and encoding it
             l=dup+n;
             if(l>90)
            {
@@ -50,10 +50,10 @@ void decode(string str,int n)
     cout<<"The decoded message is ";
     for(int i=0;i<str.length();i++)
     {
-        if(islower(str[i]))
+        if(islower(str[i]))//to check if the character is lower or upper case
         {
-          dup=int(str[i]);
-          int l=dup-n;
+          dup=int(str[i]);//copying each character and decoding it
+          int l=dup-n;////decrementing the integer value by number of shifts
           if(l<97)
           {
               l=97-l;
@@ -64,7 +64,7 @@ void decode(string str,int n)
         }
         else
         {
-            dup=int(str[i]);
+            dup=int(str[i]);//copying each character and decoding it
           int l=dup-n;
           if(l<65)
           {
